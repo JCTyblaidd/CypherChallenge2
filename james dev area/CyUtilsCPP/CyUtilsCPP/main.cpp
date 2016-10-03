@@ -1,9 +1,36 @@
 #include "MainFramework.hpp"
 #include <fstream>
+#include "cy_header.h"
+#include <algorithm>
 
+//Work Pool For HEAVY WORKLOADS
 WorkPoolType* WorkPool;
+//Parameter Parser
 params::LaunchParams LaunchParameters;
+//Log Utility
 logging::ConsoleLogHandler* LogHandle;
+
+std::string upperStr(std::string Str) {
+	std::string str(Str);
+	std::transform(str.begin(), str.end(), str.begin(), ::toupper);
+	return str;
+}
+
+void runHandle(RunnableCache Cache) {
+	Cache.Func(Cache.Data);
+}
+
+
+std::string sanitizeCipherText(std::string str) {
+	std::string out;
+	std::string in = upperStr(str);
+	for (char c : in) {
+		if (c >= 'A' && c <= 'Z') {
+			out += c;
+		}
+	}
+	return out;
+}
 
 int main(int argCount, char *args[]) {
 	//Load Parameters//
@@ -38,14 +65,17 @@ int main(int argCount, char *args[]) {
 		delete LogHandle;
 		exit(-1);
 	}
+	cypher_text = sanitizeCipherText(cypher_text);
 	String jobRequest = LaunchParameters.getStringWithDefault("type", "none");
 	if (jobRequest == "none") {
 		INFO("No Task Requested.. terminating");
 	}
-	else if(jobRequest == "ceasar") {
-		//TODO:
+	else if(jobRequest == "caesar") {
+		runCeasar(cypher_text);
 	}
-
+	else if (jobRequest == "frequency") {
+		runFreqAnalysis(cypher_text);
+	}
 	else {
 		INFO("Unknown Job Type:");
 		INFO(" > " + jobRequest);

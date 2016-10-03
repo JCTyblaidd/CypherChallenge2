@@ -43,6 +43,9 @@
     <ClInclude Include="MainFramework.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="cy_header.h">
+      <Filter>Source Files\cypher</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RingBuffer.cpp">
@@ -56,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cy_caesar.cpp">
+      <Filter>Source Files\cypher</Filter>
+    </ClCompile>
+    <ClCompile Include="cy_freq.cpp">
+      <Filter>Source Files\cypher</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

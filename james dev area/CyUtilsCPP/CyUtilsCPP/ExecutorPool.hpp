@@ -9,8 +9,6 @@ struct RunnableCache {
 	RunnableData Data;
 };
 
-void runHandle(RunnableCache Cache) {
-	Cache.Func(Cache.Data);
-}
+void runHandle(RunnableCache Cache);
 
 typedef concurrency::WorkerPool<RunnableCache, 1024, concurrency::SINGLE_PUBLISHER, concurrency::BLOCK, concurrency::YEILD> WorkPoolType;
