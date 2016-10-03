@@ -1,0 +1,3 @@
+Directory for storing all application files:
+
+E.G: .exe, .jar ...
