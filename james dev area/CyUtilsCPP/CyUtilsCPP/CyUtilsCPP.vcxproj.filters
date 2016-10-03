@@ -2,16 +2,60 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Source Files\concurrency">
+      <UniqueIdentifier>{830cde9c-f6eb-4264-9739-8a667f93de35}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\params">
+      <UniqueIdentifier>{58d9dd67-b2c1-4516-a6d6-84d455e07f96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\console">
+      <UniqueIdentifier>{88c52e5d-06e7-42d6-bcac-0b02abeccb79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\impl">
+      <UniqueIdentifier>{e1a56248-ca7b-4cbe-92bd-17cd044f4da0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cypher">
+      <UniqueIdentifier>{148e7139-500c-4919-8002-8c05df6aaaa5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RingBuffer.hpp">
+      <Filter>Source Files\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerPool.hpp">
+      <Filter>Source Files\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="LaunchParams.hpp">
+      <Filter>Source Files\params</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.hpp">
+      <Filter>Source Files\console</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleLogger.hpp">
+      <Filter>Source Files\console</Filter>
+    </ClInclude>
+    <ClInclude Include="ExecutorPool.hpp">
+      <Filter>Source Files\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFramework.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RingBuffer.cpp">
+      <Filter>Source Files\concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="LaunchParams.cpp">
+      <Filter>Source Files\params</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleLogger.cpp">
+      <Filter>Source Files\console</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
