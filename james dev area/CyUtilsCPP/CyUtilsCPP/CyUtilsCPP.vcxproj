@@ -125,6 +125,7 @@
     <ClCompile Include="ConsoleLogger.cpp" />
     <ClCompile Include="cy_caesar.cpp" />
     <ClCompile Include="cy_freq.cpp" />
+    <ClCompile Include="cy_vignere.cpp" />
     <ClCompile Include="LaunchParams.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RingBuffer.cpp" />

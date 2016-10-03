@@ -66,5 +66,8 @@
     <ClCompile Include="cy_freq.cpp">
       <Filter>Source Files\cypher</Filter>
     </ClCompile>
+    <ClCompile Include="cy_vignere.cpp">
+      <Filter>Source Files\cypher</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
