@@ -36,6 +36,7 @@ int main(int argCount, char *args[]) {
 	//Load Parameters//
 	LogHandle = new logging::ConsoleLogHandler();
 	uint threadCount = std::thread::hardware_concurrency();
+	INFO("Loading ThreadPool w/ Size=" + std::to_string(threadCount));
 	WorkPool = new WorkPoolType(threadCount, runHandle);
 	LaunchParameters.Load(argCount, args);
 	//OK Now Find Work
@@ -75,6 +76,9 @@ int main(int argCount, char *args[]) {
 	}
 	else if (jobRequest == "frequency") {
 		runFreqAnalysis(cypher_text);
+	}
+	else if (jobRequest == "vignere") {
+		runVignere(cypher_text);
 	}
 	else {
 		INFO("Unknown Job Type:");
