@@ -42,5 +42,15 @@ namespace concurrency {
 		void pushJob(T t) {
 			Buffer.publish(t);
 		}
+		void awaitWorkFinished() {
+			while (true) {
+				int32_t i = Buffer.getSnapshotWaiting();
+				if (i <= 0) {
+					return;
+				}else {
+					std::this_thread::sleep_for(std::chrono::milliseconds(100));
+				}
+			}
+		}
 	};
 }

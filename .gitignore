@@ -4,10 +4,27 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
+
+#Visual Studio#
+*.obj
+*.tlog
+*.lastbuildstate
+*.idb
+*.pdb
+*.log
+*.ilk
+*.ipdb
+*.iobj
+
+#Hide non binary form of the stats
+main workspace/stat_data/bigram_vals.txt
+main workspace/stat_data/quadgram_vals.txt
+main workspace/stat_data/trigram_vals.txt
+main workspace/stat_data/monogram_vals.txt
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 james dev area/CyUtilsCPP/CyUtilsCPP.VC.VC.opendb
+

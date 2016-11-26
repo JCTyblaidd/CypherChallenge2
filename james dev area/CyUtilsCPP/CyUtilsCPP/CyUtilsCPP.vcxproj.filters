@@ -20,6 +20,9 @@
     <Filter Include="Source Files\cypher">
       <UniqueIdentifier>{148e7139-500c-4919-8002-8c05df6aaaa5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\pwn_cy">
+      <UniqueIdentifier>{54e4b53a-8deb-475a-b742-e355b235a106}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RingBuffer.hpp">
@@ -46,6 +49,9 @@
     <ClInclude Include="cy_header.h">
       <Filter>Source Files\cypher</Filter>
     </ClInclude>
+    <ClInclude Include="pwn_cy.hpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RingBuffer.cpp">
@@ -68,6 +74,42 @@
     </ClCompile>
     <ClCompile Include="cy_vignere.cpp">
       <Filter>Source Files\cypher</Filter>
+    </ClCompile>
+    <ClCompile Include="cy_affine.cpp">
+      <Filter>Source Files\cypher</Filter>
+    </ClCompile>
+    <ClCompile Include="smart_decrypt.cpp">
+      <Filter>Source Files\cypher</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_stats.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_vigenere.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_score_stats.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_key_iterate.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="best_v_cache.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_keyword.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_affine.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_transposition.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_order_iterate.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
+    </ClCompile>
+    <ClCompile Include="pwn_amsco.cpp">
+      <Filter>Source Files\pwn_cy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
